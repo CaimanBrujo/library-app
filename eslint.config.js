@@ -5,6 +5,7 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 import tsPlugin from '@typescript-eslint/eslint-plugin'
 import tsParser from '@typescript-eslint/parser'
 import prettier from 'eslint-plugin-prettier'
+import path from 'node:path'
 
 export default [
   js.configs.recommended,
@@ -15,8 +16,8 @@ export default [
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
-        project: true,
-        tsconfigRootDir: process.cwd()
+        project: path.resolve('./tsconfig.json'),
+        tsconfigRootDir: path.resolve()
       },
       globals: globals.browser
     },
