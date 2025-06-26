@@ -8,9 +8,9 @@ Users can add, edit, remove, and mark books as read/unread. The app uses localSt
 
 ## Live Preview
 
-You can view the deployed app on GitHub Pages:
+You can view the deployed app on Vercel:
 
-https://caimanbrujo.github.io/library-app
+https://library-659vjb55d-caimanbrujos-projects.vercel.app/
 
 ---
 
