@@ -20,7 +20,7 @@ const initialBooks: Book[] = [
     title: 'Clean Code',
     author: 'Robert C. Martin',
     pages: 464,
-    read: false
+    read: true
   },
   {
     id: crypto.randomUUID(),

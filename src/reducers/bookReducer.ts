@@ -2,8 +2,9 @@ import type { Book } from '../types/Book'
 
 export type Action =
   | { type: 'ADD_BOOK'; payload: Book }
-  | { type: 'REMOVE_BOOK'; payload: string } // id
-  | { type: 'TOGGLE_READ'; payload: string } // id
+  | { type: 'REMOVE_BOOK'; payload: string }
+  | { type: 'TOGGLE_READ'; payload: string }
+  | { type: 'EDIT_BOOK'; payload: Book }
 
 export function bookReducer(state: Book[], action: Action): Book[] {
   switch (action.type) {
@@ -14,6 +15,10 @@ export function bookReducer(state: Book[], action: Action): Book[] {
     case 'TOGGLE_READ':
       return state.map((book) =>
         book.id === action.payload ? { ...book, read: !book.read } : book
+      )
+    case 'EDIT_BOOK':
+      return state.map((book) =>
+        book.id === action.payload.id ? { ...action.payload } : book
       )
     default:
       return state

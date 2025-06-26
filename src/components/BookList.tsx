@@ -6,6 +6,7 @@ type Props = {
   dispatch: React.Dispatch<
     | { type: 'TOGGLE_READ'; payload: string }
     | { type: 'REMOVE_BOOK'; payload: string }
+    | { type: 'EDIT_BOOK'; payload: Book }
   >
 }
 
