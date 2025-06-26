@@ -1,70 +1,100 @@
-# React + TypeScript + Vite + Tailwind CSS v4 Template
+# Library App
 
-## Quick Start
+A simple digital library built with React, TypeScript, and Tailwind CSS v4.
 
-```bash
-npm install
-npm run dev      # Start dev server
-npm run lint     # Run ESLint
-npm run format   # Format code with Prettier
-npm run build    # Build for production
-npm run preview  # Preview production build
-```
+Users can add, edit, remove, and mark books as read/unread. The app uses localStorage to persist data and offers a reset button to restore the default book list.
 
 ---
 
-## Stack Overview
+## Live Preview
 
-- **React 19**
-- **TypeScript 5.8**
-- **Vite 6**
-- **Tailwind CSS v4**
-- **ESLint 9**
-- **Prettier 3**
+You can view the deployed app on GitHub Pages:
+
+https://caimanbrujo.github.io/library-app
+
+---
+
+## Features
+
+- Add new books with title, author, pages, and read status
+- Edit existing books
+- Remove books
+- Mark books as read or unread
+- Reset library to default
+- Data persistence with localStorage
+- Fully responsive layout using Tailwind CSS v4
+
+---
+
+## Stack
+
+- React 19
+- TypeScript 5.8
+- Vite 6
+- Tailwind CSS v4
+- ESLint 9
+- Prettier 3
 
 ---
 
 ## Project Structure
 
 ```
-template-react-ts/
+library-app/
 ├── public/
 ├── src/
-│   ├── assets/
 │   ├── components/
+│   │   ├── BookCard.tsx
+│   │   ├── BookEdit.tsx
+│   │   ├── BookForm.tsx
+│   │   ├── BookList.tsx
 │   │   ├── Footer.tsx
 │   │   └── Header.tsx
+│   ├── data/
+│   │   └── initialBooks.ts
+│   ├── reducers/
+│   │   └── bookReducer.ts
+│   ├── types/
+│   │   └── Book.ts
 │   ├── App.tsx
 │   ├── index.css
 │   ├── main.tsx
 │   └── vite-env.d.ts
+├── dist/
 ├── .gitattributes
 ├── .gitignore
-├── .prettierignore
 ├── .prettierrc
 ├── eslint.config.js
 ├── index.html
-├── LICENSE
-├── package-lock.json
 ├── package.json
 ├── postcss.config.js
-├── Readme.md
 ├── tailwind.config.ts
-├── tsconfig.app.json
 ├── tsconfig.json
+├── tsconfig.app.json
 ├── tsconfig.node.json
 └── vite.config.ts
 ```
 
 ---
 
-## Recommended VS Code Extensions
+## Setup
 
-To get the best developer experience:
+```
+git clone https://github.com/CaimanBrujo/library-app.git
+cd library-app
+npm install
+```
 
-- **ESLint** – by Dirk Baeumer
-- **Prettier – Code formatter** – by Prettier
-- **Tailwind CSS IntelliSense** – by Tailwind Labs
-- **PostCSS Language Support** – by csstools
+---
+
+## Scripts
+
+```
+npm run dev        # Start development server
+npm run lint       # Run ESLint
+npm run format     # Format with Prettier
+npm run build      # Build for production
+npm run preview    # Preview production build
+```
 
 ---
