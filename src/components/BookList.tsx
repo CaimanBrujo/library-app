@@ -1,3 +1,4 @@
+import React from 'react'
 import type { Book } from '../types/Book'
 import BookCard from './BookCard'
 
