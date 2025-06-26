@@ -10,10 +10,24 @@ import BookList from './components/BookList'
 const initialBooks: Book[] = [
   {
     id: crypto.randomUUID(),
-    title: 'The Odin Project',
-    author: 'Odin',
-    pages: 300,
+    title: 'Fahrenheit 451',
+    author: 'Ray Bradbury',
+    pages: 194,
     read: true
+  },
+  {
+    id: crypto.randomUUID(),
+    title: 'Clean Code',
+    author: 'Robert C. Martin',
+    pages: 464,
+    read: false
+  },
+  {
+    id: crypto.randomUUID(),
+    title: 'JavaScript: The Good Parts',
+    author: 'Douglas Crockford',
+    pages: 176,
+    read: false
   }
 ]
 
@@ -24,7 +38,7 @@ export default function App() {
     <div className="min-h-screen flex flex-col bg-background text-text">
       <Header />
       <main className="flex-1 p-6">
-        <h1 className="text-2xl font-bold mb-6 w-fit mx-auto">Library App</h1>
+        <h1 className="text-2xl font-bold mb-6 w-fit mx-auto">Books</h1>
         <BookForm dispatch={dispatch} />
         <BookList books={books} dispatch={dispatch} />
       </main>
