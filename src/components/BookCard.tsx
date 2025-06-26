@@ -31,14 +31,14 @@ export default function BookCard({ book, dispatch }: Props) {
       <div className="absolute top-2 right-2 flex gap-1">
         <button
           onClick={() => setIsEditing(true)}
-          className="text-xs text-white bg-surface-300 hover:bg-surface-400 rounded-full w-6 h-6 flex items-center justify-center transition"
+          className="text-xs font-bold text-[color:var(--color-text)] dark:text-white bg-[color:var(--color-surface-300)] hover:bg-[color:var(--color-surface-400)] rounded-full w-6 h-6 flex items-center justify-center transition"
           aria-label="Edit book"
         >
           ✎
         </button>
         <button
           onClick={() => dispatch({ type: 'REMOVE_BOOK', payload: book.id })}
-          className="text-xs text-white bg-surface-300 hover:bg-surface-400 rounded-full w-6 h-6 flex items-center justify-center transition"
+          className="text-xs font-bold text-[color:var(--color-text)] dark:text-white bg-[color:var(--color-surface-300)] hover:bg-[color:var(--color-surface-400)] rounded-full w-6 h-6 flex items-center justify-center transition"
           aria-label="Remove book"
         >
           ×
@@ -51,7 +51,13 @@ export default function BookCard({ book, dispatch }: Props) {
         <p className="text-subtitle text-sm">{book.pages} pages</p>
         <p className="mt-1 text-sm text-subtitle">
           Status:{' '}
-          <span className={book.read ? 'text-green-400' : 'text-red-400'}>
+          <span
+            className={
+              book.read
+                ? 'text-[color:var(--color-read)]'
+                : 'text-[color:var(--color-not-read)]'
+            }
+          >
             {book.read ? 'Read' : 'Not read'}
           </span>
         </p>

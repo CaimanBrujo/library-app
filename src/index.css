@@ -1,18 +1,20 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
-  --color-surface-100: #0d1117;
-  --color-surface-200: #161b22;
-  --color-surface-300: #1f2937;
-  --color-surface-400: #2b3441;
+  --color-surface-100: #f9fafb;
+  --color-surface-200: #f3f4f6;
+  --color-surface-300: #e5e7eb;
+  --color-surface-400: #d1d5db;
 
-  --color-accent: #3b82f6;
-  --color-accent-soft: #60a5fa;
-  --color-accent-muted: #1e40af;
+  --color-accent: #2563eb;
+  --color-accent-soft: #3b82f6;
+  --color-accent-muted: #1d4ed8;
 
-  --color-text: #f3f4f6;
-  --color-muted: #9ca3af;
-  --color-border: #3f3f46;
+  --color-text: #111827;
+  --color-muted: #6b7280;
+  --color-border: #d1d5db;
 
   --color-background: var(--color-surface-100);
   --color-card: var(--color-surface-200);
@@ -20,4 +22,32 @@
   --color-button-hover: var(--color-accent-soft);
   --color-title: var(--color-text);
   --color-subtitle: var(--color-muted);
+  --color-read: #16a34a;
+  --color-not-read: #dc2626;
+}
+
+@layer theme {
+  .dark {
+    --color-surface-100: #0d1117;
+    --color-surface-200: #161b22;
+    --color-surface-300: #1f2937;
+    --color-surface-400: #2b3441;
+
+    --color-accent: #3b82f6;
+    --color-accent-soft: #60a5fa;
+    --color-accent-muted: #1e40af;
+
+    --color-text: #f3f4f6;
+    --color-muted: #9ca3af;
+    --color-border: #3f3f46;
+
+    --color-background: var(--color-surface-100);
+    --color-card: var(--color-surface-200);
+    --color-button: var(--color-accent);
+    --color-button-hover: var(--color-accent-soft);
+    --color-title: var(--color-text);
+    --color-subtitle: var(--color-muted);
+    --color-read: #22c55e;
+    --color-not-read: #ef4444;
+  }
 }
