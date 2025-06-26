@@ -24,19 +24,21 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-[color:var(--color-background)] text-[color:var(--color-text)]">
+    <div className="min-h-screen flex flex-col bg-background text-title">
       <Header />
 
       <main className="flex-grow p-6">
-        <h1 className="text-4xl font-bold mb-6 text-center">Books</h1>
+        <h1 className="text-4xl font-bold mb-6 text-center text-title">
+          Books
+        </h1>
         <BookForm dispatch={dispatch} />
         <BookList books={books} dispatch={dispatch} />
       </main>
 
-      <div className="p-4">
+      <div className="p-6">
         <button
           onClick={handleReset}
-          className="w-full max-w-xs mx-auto block px-4 py-2 bg-[color:var(--color-gray-600)] text-white rounded hover:bg-[color:var(--color-gray-500)] transition-colors"
+          className="w-full max-w-xs mx-auto block px-4 py-2 bg-button text-white rounded-md hover:bg-button-hover transition"
         >
           Reset to Default
         </button>

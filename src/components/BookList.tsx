@@ -13,8 +13,8 @@ type Props = {
 
 export default function BookList({ books, dispatch }: Props) {
   return (
-    <div className="flex justify-center">
-      <div className="flex flex-wrap justify-center gap-4 max-w-[1000px]">
+    <div className="flex justify-center px-4">
+      <div className="flex flex-wrap justify-center gap-6 max-w-[1000px]">
         {books.map((book) => (
           <BookCard key={book.id} book={book} dispatch={dispatch} />
         ))}

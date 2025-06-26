@@ -29,44 +29,48 @@ export default function BookEdit({ book, dispatch, onClose }: Props) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-2">
+    <form onSubmit={handleSubmit} className="space-y-3 w-full">
       <input
         type="text"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
-        className="w-full p-1 rounded bg-gray-700 text-white"
+        className="w-full px-3 py-2 rounded-md bg-surface-300 text-title placeholder-muted border border-border focus:outline-none focus:ring-2 focus:ring-button-hover"
+        placeholder="Title"
       />
       <input
         type="text"
         value={author}
         onChange={(e) => setAuthor(e.target.value)}
-        className="w-full p-1 rounded bg-gray-700 text-white"
+        className="w-full px-3 py-2 rounded-md bg-surface-300 text-title placeholder-muted border border-border focus:outline-none focus:ring-2 focus:ring-button-hover"
+        placeholder="Author"
       />
       <input
         type="number"
         value={pages}
         onChange={(e) => setPages(e.target.value)}
-        className="w-full p-1 rounded bg-gray-700 text-white"
+        className="w-full px-3 py-2 rounded-md bg-surface-300 text-title placeholder-muted border border-border focus:outline-none focus:ring-2 focus:ring-button-hover"
+        placeholder="Pages"
       />
-      <label className="flex items-center gap-2 text-sm text-white">
+      <label className="flex items-center gap-2 text-sm text-subtitle">
         <input
           type="checkbox"
           checked={read}
           onChange={(e) => setRead(e.target.checked)}
+          className="accent-button"
         />
         Already read
       </label>
-      <div className="flex gap-2 mt-2">
+      <div className="flex gap-2 pt-2">
         <button
           type="submit"
-          className="px-2 py-1 text-sm bg-green-600 text-white rounded hover:bg-green-500"
+          className="px-4 py-1.5 text-sm bg-button text-white rounded-md hover:bg-button-hover transition"
         >
           Save
         </button>
         <button
           type="button"
           onClick={onClose}
-          className="px-2 py-1 text-sm bg-gray-600 text-white rounded hover:bg-gray-500"
+          className="px-4 py-1.5 text-sm bg-surface-300 text-title rounded-md hover:bg-surface-400 transition"
         >
           Cancel
         </button>

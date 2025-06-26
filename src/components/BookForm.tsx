@@ -70,7 +70,7 @@ export default function BookForm({ dispatch }: Props) {
           setIsOpen(!isOpen)
           setError('')
         }}
-        className="px-4 py-2 w-[150px] mx-auto block bg-[color:var(--color-gray-400)] text-white rounded hover:brightness-110 transition-colors duration-200 mb-4"
+        className="px-4 py-2 w-[150px] mx-auto block bg-button text-white rounded-md hover:bg-button-hover transition duration-200 mb-4"
       >
         {isOpen ? 'Cancel' : 'Add New Book'}
       </button>
@@ -80,9 +80,9 @@ export default function BookForm({ dispatch }: Props) {
           <form
             ref={overlayRef}
             onSubmit={handleSubmit}
-            className="bg-gray-900 p-6 rounded-lg shadow-lg w-[90%] max-w-[500px] space-y-4"
+            className="bg-card p-6 rounded-2xl shadow-lg w-[90%] max-w-[500px] space-y-4 border border-border"
           >
-            <h2 className="text-2xl font-semibold text-white mb-2">New Book</h2>
+            <h2 className="text-title text-2xl font-bold">New Book</h2>
 
             {error && (
               <div className="text-red-400 text-sm font-medium">{error}</div>
@@ -91,38 +91,38 @@ export default function BookForm({ dispatch }: Props) {
             <input
               type="text"
               placeholder="Title"
-              className="w-full p-2 rounded bg-gray-800 text-white"
+              className="w-full px-3 py-2 rounded-md bg-surface-300 text-title placeholder-muted border border-border focus:outline-none focus:ring-2 focus:ring-button-hover"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
             <input
               type="text"
               placeholder="Author"
-              className="w-full p-2 rounded bg-gray-800 text-white"
+              className="w-full px-3 py-2 rounded-md bg-surface-300 text-title placeholder-muted border border-border focus:outline-none focus:ring-2 focus:ring-button-hover"
               value={author}
               onChange={(e) => setAuthor(e.target.value)}
             />
             <input
               type="number"
               placeholder="Pages"
-              className="w-full p-2 rounded bg-gray-800 text-white"
+              className="w-full px-3 py-2 rounded-md bg-surface-300 text-title placeholder-muted border border-border focus:outline-none focus:ring-2 focus:ring-button-hover"
               value={pages}
               onChange={(e) => setPages(e.target.value)}
             />
 
-            <label className="flex items-center gap-2 text-white text-sm">
+            <label className="flex items-center gap-2 text-sm text-subtitle">
               <input
                 type="checkbox"
                 checked={read}
                 onChange={(e) => setRead(e.target.checked)}
-                className="accent-green-600"
+                className="accent-button"
               />
               Already read
             </label>
 
             <button
               type="submit"
-              className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-500"
+              className="w-full px-4 py-2 bg-button text-white rounded-md hover:bg-button-hover transition"
             >
               Submit
             </button>

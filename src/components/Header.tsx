@@ -1,7 +1,7 @@
 export default function Header() {
   return (
-    <header className="w-full bg-background text-text py-4 px-6 border-b border-border mt-auto">
-      <h1 className="text-xl font-semibold text-center">
+    <header className="w-full bg-background text-title py-6 px-6 border-b border-border">
+      <h1 className="text-2xl font-bold text-center tracking-tight">
         Library App using React + Vite + Tailwind CSS
       </h1>
     </header>

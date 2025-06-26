@@ -16,7 +16,7 @@ export default function BookCard({ book, dispatch }: Props) {
 
   if (isEditing) {
     return (
-      <div className="relative w-[300px] h-[230px] p-4 border border-border rounded shadow-sm bg-gray-800 flex items-center justify-center">
+      <div className="relative w-[300px] h-[230px] p-4 border border-border rounded-2xl shadow bg-card flex items-center justify-center">
         <BookEdit
           book={book}
           dispatch={dispatch}
@@ -27,18 +27,18 @@ export default function BookCard({ book, dispatch }: Props) {
   }
 
   return (
-    <div className="relative w-[300px] h-[230px] p-4 border border-border rounded shadow-sm bg-gray-800 pt-[30px]">
+    <div className="relative w-[300px] h-[230px] p-4 border border-border rounded-2xl shadow bg-card pt-[30px]">
       <div className="absolute top-2 right-2 flex gap-1">
         <button
           onClick={() => setIsEditing(true)}
-          className="text-xs text-white bg-gray-700 hover:bg-gray-600 rounded-full w-6 h-6 flex items-center justify-center"
+          className="text-xs text-white bg-surface-300 hover:bg-surface-400 rounded-full w-6 h-6 flex items-center justify-center transition"
           aria-label="Edit book"
         >
           ✎
         </button>
         <button
           onClick={() => dispatch({ type: 'REMOVE_BOOK', payload: book.id })}
-          className="text-xs text-white bg-gray-700 hover:bg-gray-600 rounded-full w-6 h-6 flex items-center justify-center"
+          className="text-xs text-white bg-surface-300 hover:bg-surface-400 rounded-full w-6 h-6 flex items-center justify-center transition"
           aria-label="Remove book"
         >
           ×
@@ -46,12 +46,12 @@ export default function BookCard({ book, dispatch }: Props) {
       </div>
 
       <div>
-        <h2 className="text-xl font-semibold">{book.title}</h2>
-        <p className="text-muted">{book.author}</p>
-        <p className="text-muted">{book.pages} pages</p>
-        <p className="mt-1">
+        <h2 className="text-title text-lg font-semibold">{book.title}</h2>
+        <p className="text-subtitle text-sm">{book.author}</p>
+        <p className="text-subtitle text-sm">{book.pages} pages</p>
+        <p className="mt-1 text-sm text-subtitle">
           Status:{' '}
-          <span className={book.read ? 'text-green-500' : 'text-red-500'}>
+          <span className={book.read ? 'text-green-400' : 'text-red-400'}>
             {book.read ? 'Read' : 'Not read'}
           </span>
         </p>
@@ -59,7 +59,7 @@ export default function BookCard({ book, dispatch }: Props) {
 
       <button
         onClick={() => dispatch({ type: 'TOGGLE_READ', payload: book.id })}
-        className="mt-3 px-3 py-1 text-sm bg-gray-700 text-white rounded hover:bg-gray-600 transition-colors"
+        className="mt-3 px-3 py-1 text-sm bg-button text-white rounded-md hover:bg-button-hover transition-colors"
       >
         Mark as {book.read ? 'Unread' : 'Read'}
       </button>
