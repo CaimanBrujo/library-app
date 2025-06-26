@@ -10,7 +10,7 @@ Users can add, edit, remove, and mark books as read/unread. The app uses localSt
 
 You can view the deployed app on Vercel:
 
-https://library-659vjb55d-caimanbrujos-projects.vercel.app/
+https://library-app-ten-delta.vercel.app/
 
 ---
 
@@ -49,7 +49,8 @@ library-app/
 │   │   ├── BookForm.tsx
 │   │   ├── BookList.tsx
 │   │   ├── Footer.tsx
-│   │   └── Header.tsx
+│   │   ├── Header.tsx
+│   │   └── ThemeToggle.tsx
 │   ├── data/
 │   │   └── initialBooks.ts
 │   ├── reducers/
