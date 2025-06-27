@@ -34,21 +34,21 @@ export default function BookEdit({ book, dispatch, onClose }: Props) {
         type="text"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
-        className="w-full px-3 py-2 rounded-md bg-surface-300 text-title placeholder-muted border border-border focus:outline-none focus:ring-2 focus:ring-button-hover"
+        className="w-full px-3 py-1 rounded-md bg-surface-300 text-title placeholder-muted border border-border focus:outline-none focus:ring-2 focus:ring-button-hover"
         placeholder="Title"
       />
       <input
         type="text"
         value={author}
         onChange={(e) => setAuthor(e.target.value)}
-        className="w-full px-3 py-2 rounded-md bg-surface-300 text-title placeholder-muted border border-border focus:outline-none focus:ring-2 focus:ring-button-hover"
+        className="w-full px-3 py-1 rounded-md bg-surface-300 text-title placeholder-muted border border-border focus:outline-none focus:ring-2 focus:ring-button-hover"
         placeholder="Author"
       />
       <input
         type="number"
         value={pages}
         onChange={(e) => setPages(e.target.value)}
-        className="w-full px-3 py-2 rounded-md bg-surface-300 text-title placeholder-muted border border-border focus:outline-none focus:ring-2 focus:ring-button-hover"
+        className="w-full px-3 py-1 rounded-md bg-surface-300 text-title placeholder-muted border border-border focus:outline-none focus:ring-2 focus:ring-button-hover"
         placeholder="Pages"
       />
       <label className="flex items-center gap-2 text-sm text-subtitle">
