@@ -1,6 +1,7 @@
 import React from 'react'
 import type { Book } from '../types/Book'
 import BookEdit from './BookEdit'
+import { FilePenLine, Trash2 } from 'lucide-react'
 
 type Props = {
   book: Book
@@ -31,17 +32,23 @@ export default function BookCard({ book, dispatch }: Props) {
       <div className="absolute top-2 right-2 flex gap-1">
         <button
           onClick={() => setIsEditing(true)}
-          className="text-m font-bold text-[color:var(--color-text)] dark:text-white bg-[color:var(--color-surface-300)] hover:bg-[color:var(--color-surface-400)] rounded-full w-10 h-10 flex items-center justify-center transition"
+          className="bg-[color:var(--color-surface-300)] hover:bg-[color:var(--color-surface-400)] rounded-full w-10 h-10 flex items-center justify-center transition"
           aria-label="Edit book"
         >
-          ✎
+          <FilePenLine
+            size={18}
+            className="text-[color:var(--color-text)] dark:text-white"
+          />
         </button>
         <button
           onClick={() => dispatch({ type: 'REMOVE_BOOK', payload: book.id })}
-          className="text-m font-bold text-[color:var(--color-text)] dark:text-white bg-[color:var(--color-surface-300)] hover:bg-[color:var(--color-surface-400)] rounded-full w-10 h-10 flex items-center justify-center transition"
+          className="bg-[color:var(--color-surface-300)] hover:bg-[color:var(--color-surface-400)] rounded-full w-10 h-10 flex items-center justify-center transition"
           aria-label="Remove book"
         >
-          ×
+          <Trash2
+            size={18}
+            className="text-[color:var(--color-text)] dark:text-white"
+          />
         </button>
       </div>
 
